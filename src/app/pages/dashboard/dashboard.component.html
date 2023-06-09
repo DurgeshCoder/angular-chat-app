@@ -96,12 +96,16 @@
     />
     <div class="card mask-custom">
       <div
-        class="card-header d-flex justify-content-between p-3"
+        class="card-header d-flex flex-column justify-content-between p-3"
         style="border-bottom: 1px solid rgba(255, 255, 255, 0.3)"
       >
         <p class="fw-bold mb-0">{{ user.name }}</p>
+
         <p class="text-light small mb-0">
-          <i class="far fa-clock"></i>{{ chat.date | date : "dd/MM/yyyy" }}
+          <i class="far fa-clock"></i
+          ><span class="ms-1">{{
+            chat.date | date : "dd/MM/yyyy hh:mm:ss a"
+          }}</span>
         </p>
       </div>
       <div class="card-body">
@@ -116,12 +120,15 @@
   <li class="d-flex justify-content-end mb-4">
     <div class="card mask-custom" style="max-width: 50%">
       <div
-        class="card-header d-flex justify-content-between p-3"
+        class="card-header d-flex flex-column justify-content-between p-3"
         style="border-bottom: 1px solid rgba(255, 255, 255, 0.3)"
       >
-        <p class="fw-bold mb-0">{{ user.name }}</p>
+        <p class="fw-bold mb-0">You</p>
         <p class="text-light small mb-0">
-          <i class="far fa-clock"></i>{{ chat.date | date : "dd/MM/yyyy" }}
+          <i class="far fa-clock"></i
+          ><span class="ms-1">{{
+            chat.date | date : "dd/MM/yyyy hh:mm:ss a"
+          }}</span>
         </p>
       </div>
       <div class="card-body">
